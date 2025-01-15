@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Webpage Example</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Responsive Flexbox Webpage</h1>
+    <p>Demonstrating all Flexbox properties</p>
+  </header>
+
+  <div class="container">
+    <nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="nav-links hidden">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Main Content</h2>
+      <p>This is the main content area. It takes up more space compared to the sidebar and navigation due to its
+        `flex-grow` value.</p>
+
+      <section class="flexbox-demo">
+        <div class="box">Box 1<br>Order: 2<br>Grow: 2</div>
+        <div class="box">Box 2<br>Order: 1<br>Shrink: 2</div>
+        <div class="box">Box 3<br>Order: 3<br>Basis: 200px</div>
+      </section>
+    </main>
+
+    <aside>
+      <h2>Sidebar</h2>
+      <p>This is the sidebar area.</p>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Flexbox Webpage Example</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
