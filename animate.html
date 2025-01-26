@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      position: relative;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .element {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: #fff;
+      width: 200px;
+      height: 200px;
+      background-color: #e729ce;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      /* Animation CSS Code */
+      animation-duration: 3s;
+      animation-name: spin;
+      animation-timing-function: ease-in-out;
+      animation-delay: 1s;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      /* animation-play-state: paused; */
+    }
+
+    .element:hover {
+      /* animation-play-state: start; */
+    }
+
+    @keyframes spin {
+      0% {
+        transform: translate(-50%, -50%) scale(0) rotate(0);
+        border-radius: 0;
+      }
+
+      50% {
+        transform: translate(-50%, -50%) scale(1) rotate(180deg);
+        border-radius: 25%;
+        filter: blur(4px);
+        background-color: aquamarine;
+      }
+
+      100% {
+        transform: translate(-50%, -50%) scale(2) rotate(360deg);
+        border-radius: 50%;
+        border: 5px solid #8b197c;
+        ;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="element">
+    <p>Animate Me</p>
+  </div>
+</body>
+
+</html>
